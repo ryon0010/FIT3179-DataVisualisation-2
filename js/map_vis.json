@@ -1,9 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "projection": {"type": "mercator"},
-    
+    "width":500,
+    "height":700,
     "data": {
-      "url": "js/ne_1.json",
+      "url": "ne_1.json",
       "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
     },
     "transform": [
@@ -11,7 +12,7 @@
         "lookup": "properties.name",
         "from": {
           "data": {
-            "url": "data/hies_state.csv"
+            "url": "income_state.csv"
           },
           "key": "state",
           "fields": ["income_mean"]
